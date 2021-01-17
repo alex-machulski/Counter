@@ -9,7 +9,8 @@ type OneButtonType = {
 export function ButtonElement(props: OneButtonType) {
 
     return (
-        <button disabled={props.isDisabled} onClick={props.buttonFunction}>
+        <button className={props.isDisabled ? "disabled" : ""} disabled={props.isDisabled}
+                onClick={props.buttonFunction}>
             {props.name}
         </button>
     )

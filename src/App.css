@@ -1,56 +1,27 @@
-.App {
-  text-align: center;
-  margin-top: 200px;
-  width: 200px;
-  height: 200px;
-  border: 5px solid blue;
-  border-radius: 20px;
-  font-size: 30px;
-  margin-left: 40%;
-  background-color: dodgerblue;
+.App-Counter {
+    text-align: center;
+    margin-top: 150px;
+    width: 400px;
+    height: 300px;
+    border: 5px solid blue;
+    border-radius: 20px;
+    font-size: 55px;
+    margin-left: 5%;
+    background-color: dodgerblue;
+    display: inline-block;
 }
 
-.lastDigit {
-  font-size: 150%;
-  color: red;
-  font-weight: bolder;
+.Menu {
+    text-align: center;
+    margin-top: 150px;
+    width: 400px;
+    height: 300px;
+    border: 5px solid blue;
+    border-radius: 20px;
+    font-size: 30px;
+    margin-left: auto;
+    background-color: dodgerblue;
+    display: inline-block;
 }
 
-.screen {
-  display: block;
-  text-align: center;
-  width: 170px;
-  height: 70px;
-  border: 5px solid blue;
-  border-radius: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10px;
-  line-height: 70px;
-  background-color: lightgrey;
-
-}
-
-.buttons {
-  display: block;
-  width: 170px;
-  height: 70px;
-  border: 5px solid blue;
-  border-radius: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 15px;
-  line-height: 60px;
-
-}
-
-button {
-  margin: 5px;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-button [disabled$="true"] {
-  cursor: default;
-}
 

@@ -1,0 +1,27 @@
+.buttons {
+    display: block;
+    width: 365px;
+    height: 95px;
+    border: 5px solid blue;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    line-height: 60px;
+}
+
+button {
+    padding: 5px 15px;
+    margin: 18px;
+    font-size: 40px;
+    cursor: pointer;
+    background-color: blue;
+    color: whitesmoke;
+    border-radius: 10px;
+}
+
+button.disabled {
+    cursor: default;
+    background-color: grey;
+    opacity: 60%;
+}
