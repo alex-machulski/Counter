@@ -10,6 +10,7 @@ type ButtonsMenuType = {
 }
 
 export function ButtonsMenu(props: ButtonsMenuType) {
+
     const isSetDisabled = props.counterStartValue >= props.counterMaxValue ||
         props.counterStartValue < 0 || !props.editMode;
 

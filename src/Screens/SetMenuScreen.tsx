@@ -1,13 +1,11 @@
-import React, {ChangeEvent, useState} from "react";
+import React, {ChangeEvent} from "react";
 import '../App.css';
-
 
 type SetMenuScreenType = {
     changeMaxValue: (maxValue: number) => void
     changeStartValue: (minValue: number) => void
     startInputValue: number
     maxInputValue: number
-
 }
 
 export function SetMenuScreen(props: SetMenuScreenType) {
@@ -22,23 +20,27 @@ export function SetMenuScreen(props: SetMenuScreenType) {
         props.changeStartValue(parseInt(e.currentTarget.value));
     }
 
-    return (
+    const maxValueClass = `${menuError ? "inputError" : ""} ${"setMenuInput"}`;
+    const startValueClass = `${menuError || startValueError ? "inputError" : ""} ${"setMenuInput"}`;
 
+    return (
         <div className={"screen"}>
             <div>
                 <span>max value: </span>
-                <input type={"number"}
-                       className={menuError ? "setMenuInput inputError" : "setMenuInput"}
-                       value={props.maxInputValue}
-                       onChange={onChangeMaxValue}
+                <input
+                    type={"number"}
+                    className={maxValueClass}
+                    value={props.maxInputValue}
+                    onChange={onChangeMaxValue}
                 />
             </div>
             <div>
                 <span>start value: </span>
-                <input type={"number"}
-                       className={menuError || startValueError ? "setMenuInput inputError" : "setMenuInput"}
-                       value={props.startInputValue}
-                       onChange={onChangeStartValue}
+                <input
+                    type={"number"}
+                    className={startValueClass}
+                    value={props.startInputValue}
+                    onChange={onChangeStartValue}
                 />
             </div>
         </div>

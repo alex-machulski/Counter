@@ -2,7 +2,6 @@ import React from "react";
 import {ButtonElement} from "./ButtonElement";
 import './Buttons.css';
 
-
 type ButtonsCounterType = {
     counterMaxValue: number
     counterMinValue: number
@@ -14,6 +13,7 @@ type ButtonsCounterType = {
 }
 
 export function ButtonsCounter(props: ButtonsCounterType) {
+
     const isDisabledBInc = props.inputStartValue >= props.inputMaxValue ||
         props.inputStartValue < 0 || props.counter === props.counterMaxValue;
     const isDisabledReset = props.inputStartValue >= props.inputMaxValue ||

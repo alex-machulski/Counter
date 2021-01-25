@@ -11,6 +11,7 @@ export const SET_MESSAGE = "enter values and press 'set'";
 export const ERROR_MESSAGE = "Incorrect value!"
 
 function App() {
+
     //initial states
     const savedStartValue = restoreState("startValue", 0);
     const savedMaxValue = restoreState("maxValue", 1);
@@ -23,8 +24,8 @@ function App() {
     const [counter, setCounter] = useState<number>(inputValueStart);
     const [editMode, setEditMode] = useState<boolean>(true);
 
+    //functions
     const OnClickInc = () => {
-
         if (counter < counterMax)
             setCounter(counter + 1);
     }
@@ -37,7 +38,6 @@ function App() {
         saveState("maxValue", inputValueMax)
         setEditMode(false);
     }
-
     const ChangeInputStartValue = (startValue: number) => {
         setInputStartValue(startValue);
         setEditMode(true);
@@ -52,10 +52,11 @@ function App() {
     return (
         <div>
             <div className="Menu">
-                <SetMenuScreen startInputValue={inputValueStart}
-                               maxInputValue={inputValueMax}
-                               changeStartValue={ChangeInputStartValue}
-                               changeMaxValue={ChangeInputMaxValue}
+                <SetMenuScreen
+                    startInputValue={inputValueStart}
+                    maxInputValue={inputValueMax}
+                    changeStartValue={ChangeInputStartValue}
+                    changeMaxValue={ChangeInputMaxValue}
                 />
                 <ButtonsMenu
                     OnClickSet={OnClickSet}
@@ -65,10 +66,11 @@ function App() {
                 />
             </div>
             <div className="App-Counter">
-                <CounterScreen counter={counter}
-                               counterMaxValue={counterMax}
-                               counterScreenError={counterScreenError}
-                               editMode={editMode}
+                <CounterScreen
+                    counter={counter}
+                    counterMaxValue={counterMax}
+                    counterScreenError={counterScreenError}
+                    editMode={editMode}
                 />
                 <ButtonsCounter
                     counter={counter}
