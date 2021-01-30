@@ -6,6 +6,8 @@ import {ButtonsCounter} from "./Buttons/ButtonsCounter";
 import {SetMenuScreen} from "./Screens/SetMenuScreen";
 import {ButtonsMenu} from "./Buttons/ButtonsMenu";
 import {restoreState, saveState} from "./localStorage";
+import {MenuApp} from "./AppParts/MenuApp";
+import {CounterApp} from "./AppParts/CounterApp";
 
 export const SET_MESSAGE = "enter values and press 'set'";
 export const ERROR_MESSAGE = "Incorrect value!"
@@ -51,37 +53,25 @@ function App() {
 
     return (
         <div>
-            <div className="Menu">
-                <SetMenuScreen
-                    startInputValue={inputValueStart}
-                    maxInputValue={inputValueMax}
-                    changeStartValue={ChangeInputStartValue}
-                    changeMaxValue={ChangeInputMaxValue}
-                />
-                <ButtonsMenu
-                    OnClickSet={OnClickSet}
-                    editMode={editMode}
-                    counterStartValue={inputValueStart}
-                    counterMaxValue={inputValueMax}
-                />
-            </div>
-            <div className="App-Counter">
-                <CounterScreen
-                    counter={counter}
-                    counterMaxValue={counterMax}
-                    counterScreenError={counterScreenError}
-                    editMode={editMode}
-                />
-                <ButtonsCounter
-                    counter={counter}
-                    OnClickInc={OnClickInc}
-                    OnClickReset={OnClickReset}
-                    counterMinValue={counterStart}
-                    counterMaxValue={counterMax}
-                    inputStartValue={inputValueStart}
-                    inputMaxValue={inputValueMax}
-                />
-            </div>
+            <MenuApp
+                inputValueStart={inputValueStart}
+                inputValueMax={inputValueMax}
+                changeInputStartValue={ChangeInputStartValue}
+                changeInputMaxValue={ChangeInputMaxValue}
+                onClickSet={OnClickSet}
+                editMode={editMode}
+            />
+            <CounterApp
+                counter={counter}
+                counterStart={counterStart}
+                counterMax={counterMax}
+                inputValueStart={inputValueStart}
+                inputValueMax={inputValueMax}
+                counterScreenError={counterScreenError}
+                editMode={editMode}
+                onClickInc={OnClickInc}
+                onClickReset={OnClickReset}
+            />
         </div>
     );
 }

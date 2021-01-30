@@ -1,5 +1,6 @@
 import React, {ChangeEvent} from "react";
 import '../App.css';
+import {InputElement} from "./InputElement";
 
 type SetMenuScreenType = {
     changeMaxValue: (maxValue: number) => void
@@ -27,20 +28,18 @@ export function SetMenuScreen(props: SetMenuScreenType) {
         <div className={"screen"}>
             <div>
                 <span>max value: </span>
-                <input
-                    type={"number"}
-                    className={maxValueClass}
-                    value={props.maxInputValue}
+                <InputElement
+                    finalClassName={maxValueClass}
                     onChange={onChangeMaxValue}
+                    inputCounterValue={props.maxInputValue}
                 />
             </div>
             <div>
                 <span>start value: </span>
-                <input
-                    type={"number"}
-                    className={startValueClass}
-                    value={props.startInputValue}
+                <InputElement
+                    finalClassName={startValueClass}
                     onChange={onChangeStartValue}
+                    inputCounterValue={props.startInputValue}
                 />
             </div>
         </div>
