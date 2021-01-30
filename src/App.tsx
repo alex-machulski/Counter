@@ -1,10 +1,6 @@
 import React, {useState} from 'react';
 import './App.css';
 import './Screens/Screens.css';
-import {CounterScreen} from "./Screens/CounterScreen";
-import {ButtonsCounter} from "./Buttons/ButtonsCounter";
-import {SetMenuScreen} from "./Screens/SetMenuScreen";
-import {ButtonsMenu} from "./Buttons/ButtonsMenu";
 import {restoreState, saveState} from "./localStorage";
 import {MenuApp} from "./AppParts/MenuApp";
 import {CounterApp} from "./AppParts/CounterApp";
